@@ -139,3 +139,99 @@ function calculateSumWithSale(buyingSum) {
     }
 }
 
+//Таски на циклы. Каждую задачу решить всеми тремя циклами!
+//1) Вывод чисел от 25 до 0 (порядок уменьшения)
+
+let i;
+for (i = 25; i >= 0; i--) {
+    console.log(i);
+}
+
+i = 25;
+while (i >= 0) {
+    console.log (i);
+    i--;
+}
+
+i = 25;
+do {
+    console.log(i);
+    i--;
+} while (i >= 0)
+
+// //2) Вывод чисел от 10 до 50, которые кратны 5
+
+for (i = 10; i <= 50; i++) {
+    if (i % 5 === 0) {
+        console.log(i);
+        continue;
+    }
+}
+
+i = 10;
+while (i <= 50) {
+    if (i % 5 === 0) {
+        console.log(i);
+    }
+    i++;
+}
+
+i = 10;
+do {
+    if (i % 5 === 0) {
+        console.log(i);
+    }
+    i++;
+} while (i <= 50)
+
+
+//3)  Найти сумму чисел в пределах от 1 до 100.
+
+let sum = 0;
+for (i = 1; i <=100; i++) {
+    sum += i;
+}
+console.log(`Sum of numbers from 1 to 100 ${sum}`);
+
+sum = 0;
+i = 0;
+while (i <= 100) {
+    sum += i;
+    i++;
+}
+console.log(`Sum of numbers from 1 to 100 ${sum}`);
+
+sum = 0;
+i = 0;
+do {
+    sum += i;
+    i++;
+} while (i <= 100)
+console.log(`Sum of numbers from 1 to 100 ${sum}`);
+
+//4) предлагать пользователю решить пример (2 + 2 * 2) до тех пор, пока он его не решит
+
+let answer = 0;
+for(;;) {
+    answer = Number(prompt('Resolve the example: 2+2*2=?'));
+    if (answer === 6) {
+        console.log('Correct!');
+        break;
+    }
+}
+
+while (true) {
+    answer = Number(prompt('Resolve the example: 2+2*2=?'));
+    if (answer === 6) {
+        console.log('Correct!');
+        break;
+    }
+}
+
+do {
+    answer = Number(prompt('Resolve the example: 2+2*2=?'));
+    if (answer === 6) {
+        console.log('Correct!');
+        break;
+    }
+} while (true)
