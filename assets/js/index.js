@@ -81,4 +81,61 @@ let greetings = 'Hello, ';
 let userName = prompt('Enter your name');
 console.log(greetings, userName);
 
+//Таски на условия:
+//1) Спросить переменную у юзера. Если переменная равна числу 10, то выведите 'Верно', иначе выведите 'Неверно'.
+
+function checkVariable(variable) {
+    if (variable === 10) {
+        console.log('Верно');
+    } else {
+        console.log('Неверно');
+    }
+}
+let variable = Number(prompt('Enter a variable'));
+checkVariable(variable);
+
+/*2) Напишите две проверки.
+     Если переменная test равна true, то выведите 'Верно', иначе выведите 'Неверно'.
+     Если переменная test не равна true, то выведите 'Верно', иначе выведите 'Неверно'
+Проверьте работу скрипта при test, равном true, false.*/
+
+let test = false;
+console.log(`test = ${test}`)
+checkTrueVariable(test);
+checkFalseVariable(test);
+
+function checkTrueVariable(variable) {
+    if (variable) { //variable === true
+        console.log('Верно');
+    } else {
+        console.log('Неверно');
+    }
+}
+
+function checkFalseVariable(variable) {
+    if (!variable) { //variable !== true
+        console.log('Верно');
+    } else {
+        console.log('Неверно');
+    }
+}
+
+/*3) Вычислить сумму покупки с учетом скидки. Скидка 3% предоставляется, если сумма покупки больше 500 грн., а
+ скидка 5% - если сумма покупки больше 800 грн. Сумму покупки вводит юзер.*/
+
+let buyingSum = Number(prompt('Enter a buying sum in UAH:'));
+console.log(calculateSumWithSale(buyingSum));
+function calculateSumWithSale(buyingSum) {
+    if (buyingSum > 0 && buyingSum <= 500) {
+        return `Sum to pay: ${+buyingSum.toFixed(2)} UAH`;
+    } else if (buyingSum > 500 && buyingSum <= 800) {
+        console.log('Your sale - 3%');
+        return `Sum to pay: ${+(buyingSum * 0.97).toFixed(2)} UAH`
+    } else if (buyingSum > 800) {
+        console.log('Your sale - 5%');
+        return `Sum to pay: ${+(buyingSum * 0.95).toFixed(2)} UAH`;
+    } else {
+        return "Enter a correct value";
+    }
+}
 
