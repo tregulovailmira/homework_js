@@ -1,5 +1,4 @@
 //Таски на переменные
-
 // 1) Создайте две переменные a и b. Выведите в консоль результ их умножения.
 
 let a = 10;
@@ -48,3 +47,38 @@ num *= 11;
 num /= 11;
 num = ++num; // либо num++ без присвоения
 num = --num; //либо num-- без присвоения
+
+//Таски на prompt:
+//1) Запросить число у пользователя и возвести его в квадрат
+
+function square(number) {
+    return number ** 2;
+}
+let numberSquare = Number(prompt("Enter a number for squaring"));
+console.log(`Square of number: ${square(numberSquare)}`);
+
+//2) Вывести среднее арифметическое двух чисел. Числа спрашивать у пользователя.
+
+function average(num1, num2) {
+    return (num1 + num2) / 2;
+}
+let number1 = Number(prompt("Enter a number1 for calculating average"));
+let number2 = Number(prompt("Enter a number2 for calculating average"));
+console.log(`Average of two numbers: ${average(number1, number2)}`);
+
+//3) Перевести число минут в секунды. Число спрашивать у пользователя.
+
+function minutesToSeconds(minutes) {
+    return minutes * 60;
+}
+let minutes = Number(prompt('Enter a number of minutes'));
+console.log(`${minutes} minutes contains ${minutesToSeconds(minutes)} seconds`);
+
+/*4) Создайте переменные greeting со значением'Hello, ' и userName.Спросите имя пользователя и занесите данное значение
+в переменную userName. С помощью диалога выведите сообщение с приветствием. Например, 'Hello, Vasya!'.*/
+
+let greetings = 'Hello, ';
+let userName = prompt('Enter your name');
+console.log(greetings, userName);
+
+
