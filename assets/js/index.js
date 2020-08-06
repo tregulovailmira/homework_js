@@ -242,8 +242,8 @@ do {
     isAdult(20); // true
 isAdult(4); // false */
 
-checkAge(11);
-function checkAge (age) {
+isAdult(11);
+function isAdult (age) {
     if (age > 0 && age < 18) {
         console.log(false);
     } else if (age >= 18) {
