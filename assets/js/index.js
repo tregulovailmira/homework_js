@@ -243,6 +243,7 @@ do {
 isAdult(4); // false */
 
 isAdult(11);
+isAdult(25);
 function isAdult (age) {
     if (age > 0 && age < 18) {
         console.log(false);
